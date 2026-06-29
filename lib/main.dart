@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task08_api_home_screen_beg/features/home/presentation/views/home_view.dart';
 
 void main() {
@@ -10,6 +11,12 @@ class ApiHomeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomeView());
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) =>
+          MaterialApp(debugShowCheckedModeBanner: false, home: HomeView()),
+    );
   }
 }
