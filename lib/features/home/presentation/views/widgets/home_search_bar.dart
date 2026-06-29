@@ -48,8 +48,8 @@ class HomeSearchBar extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 26, right: 2),
                   child: SvgPicture.asset(
                     AssetsData.iconSearchSvg,
-                    width: 14.33.r,
-                    height: 14.33.r,
+                    width: 24.r,
+                    height: 24.r,
                     colorFilter: const ColorFilter.mode(
                       Color(0xFF6A6A6A),
                       BlendMode.srcIn,

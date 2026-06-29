@@ -11,6 +11,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: AppColors.backgroundColor,
+      elevation: 0,
       leading: IconButton(
         padding: EdgeInsets.only(left: 20.w),
         onPressed: () {},

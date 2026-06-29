@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_task08_api_home_screen_beg/core/utils/app_colors.dart';
 import 'package:flutter_task08_api_home_screen_beg/features/home/presentation/views/home_view.dart';
 
 void main() {
@@ -15,9 +16,10 @@ class ApiHomeApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context, child) => const MaterialApp(
+      builder: (context, child) => MaterialApp(
+        theme: ThemeData(scaffoldBackgroundColor: AppColors.backgroundColor),
         debugShowCheckedModeBanner: false,
-        home: HomeView(),
+        home: const HomeView(),
       ),
     );
   }
