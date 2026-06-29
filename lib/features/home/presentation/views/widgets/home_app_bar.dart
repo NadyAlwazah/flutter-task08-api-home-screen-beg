@@ -12,6 +12,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: IconButton(
+        padding: EdgeInsets.only(left: 20.w),
         onPressed: () {},
         icon: SvgPicture.asset(
           AssetsData.iconMenuSvg,
@@ -32,31 +33,34 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: true,
       actions: [
-        Stack(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(8.w),
-              child: CircleAvatar(
-                backgroundColor: AppColors.backgroundColorItem,
-                radius: 22.r,
-                child: SvgPicture.asset(
-                  AssetsData.iconBagSvg,
-                  width: 24.r,
-                  height: 24.r,
+        Padding(
+          padding: const EdgeInsets.only(right: 20.0),
+          child: Stack(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(8.w),
+                child: CircleAvatar(
+                  backgroundColor: AppColors.backgroundColorItem,
+                  radius: 22.r,
+                  child: SvgPicture.asset(
+                    AssetsData.iconBagSvg,
+                    width: 24.r,
+                    height: 24.r,
+                  ),
                 ),
               ),
-            ),
-            Positioned(
-              top: 10.h,
-              right: 10.w,
-              child: CircleAvatar(backgroundColor: Colors.red, radius: 4.r),
-            ),
-          ],
+              Positioned(
+                top: 10.h,
+                right: 10.w,
+                child: CircleAvatar(backgroundColor: Colors.red, radius: 4.r),
+              ),
+            ],
+          ),
         ),
       ],
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

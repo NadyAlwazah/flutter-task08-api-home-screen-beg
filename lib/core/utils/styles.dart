@@ -7,4 +7,8 @@ abstract class Styles {
     fontSize: 32.sp,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle textStyle12Grey = GoogleFonts.poppins(
+    color: Colors.grey,
+    fontSize: 12.sp,
+  );
 }
