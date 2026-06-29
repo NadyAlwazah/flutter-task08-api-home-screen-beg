@@ -7,8 +7,16 @@ abstract class Styles {
     fontSize: 32.sp,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle textStyle16Bold = GoogleFonts.raleway(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+  );
   static TextStyle textStyle12Grey = GoogleFonts.poppins(
     color: Colors.grey,
+    fontSize: 12.sp,
+  );
+  static TextStyle textStyle12W400 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
     fontSize: 12.sp,
   );
 }

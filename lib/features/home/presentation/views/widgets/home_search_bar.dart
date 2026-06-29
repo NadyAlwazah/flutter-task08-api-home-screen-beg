@@ -45,7 +45,7 @@ class HomeSearchBar extends StatelessWidget {
                 ),
 
                 prefixIcon: Padding(
-                  padding: const EdgeInsets.only(left: 26, right: 2),
+                  padding: const EdgeInsets.only(left: 26, right: 12),
                   child: SvgPicture.asset(
                     AssetsData.iconSearchSvg,
                     width: 24.r,

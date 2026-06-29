@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task08_api_home_screen_beg/features/home/presentation/views/widgets/categories_list_view.dart';
 import 'package:flutter_task08_api_home_screen_beg/features/home/presentation/views/widgets/home_search_bar.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -9,7 +10,11 @@ class HomeViewBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(vertical: 19.0, horizontal: 20),
       child: CustomScrollView(
-        slivers: [SliverToBoxAdapter(child: HomeSearchBar())],
+        slivers: [
+          SliverToBoxAdapter(child: HomeSearchBar()),
+          SliverToBoxAdapter(child: SizedBox(height: 24)),
+          SliverToBoxAdapter(child: CategoriesListView()),
+        ],
       ),
     );
   }
