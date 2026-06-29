@@ -14,7 +14,11 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: SvgPicture.asset(AssetsData.iconMenuSvg),
+          icon: SvgPicture.asset(
+            AssetsData.iconMenuSvg,
+            width: 25.71.w,
+            height: 18.h,
+          ),
         ),
         title: Stack(
           clipBehavior: Clip.none,
