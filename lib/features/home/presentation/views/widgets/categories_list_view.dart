@@ -21,7 +21,7 @@ class CategoriesListView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Select Category', style: Styles.textStyle16Bold),
+        Text('Select Category', style: Styles.textStyle16W600),
         SizedBox(height: 12.h),
 
         SizedBox(
