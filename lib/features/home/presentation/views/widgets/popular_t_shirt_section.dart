@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/utils/styles.dart';
+import 'package:flutter_task08_api_home_screen_beg/core/widgets/app_loader.dart';
 import 'package:flutter_task08_api_home_screen_beg/features/home/data/manager/product_cubit/product_cubit.dart';
 import 'package:flutter_task08_api_home_screen_beg/features/home/presentation/views/widgets/product_card.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,7 +32,7 @@ class PopularTShirtSection extends StatelessWidget {
           child: BlocBuilder<ProductCubit, ProductStates>(
             builder: (context, state) {
               if (state is ProductLoadingState) {
-                return const Center(child: CircularProgressIndicator());
+                return const Center(child: AppLoader());
               }
               if (state is ProductErrorState) {
                 return Center(child: Text(state.message));

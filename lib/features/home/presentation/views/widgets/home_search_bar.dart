@@ -67,7 +67,7 @@ class HomeSearchBar extends StatelessWidget {
           onTap: () {},
           child: CircleAvatar(
             radius: 27.r,
-            backgroundColor: Colors.green,
+            backgroundColor: AppColors.primary,
             child: SvgPicture.asset(
               AssetsData.iconFilterSvg,
               width: 24.r,

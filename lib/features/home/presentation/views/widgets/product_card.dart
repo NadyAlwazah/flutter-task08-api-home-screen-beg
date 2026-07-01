@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_task08_api_home_screen_beg/core/utils/app_colors.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/utils/assets.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/utils/styles.dart';
 import 'package:flutter_task08_api_home_screen_beg/features/home/data/models/product_model.dart';
@@ -82,7 +83,7 @@ class _ProductCardState extends State<ProductCard> {
                   Text(
                     'BEST SELLER',
                     style: Styles.textStyle12W500Poppins.copyWith(
-                      color: const Color(0xFF34C759),
+                      color: AppColors.primary,
                     ),
                   ),
 
@@ -125,7 +126,7 @@ class _ProductCardState extends State<ProductCard> {
                 width: 34.w,
                 height: 35.5.h,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF34C759),
+                  color: AppColors.primary,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(18.r),
                     bottomRight: Radius.circular(18.r),
