@@ -1,9 +1,11 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/utils/app_colors.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/utils/assets.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/utils/styles.dart';
+import 'package:flutter_task08_api_home_screen_beg/core/widgets/app_loader.dart';
 import 'package:flutter_task08_api_home_screen_beg/features/home/data/models/product_model.dart';
 
 class ProductCard extends StatefulWidget {
@@ -47,11 +49,15 @@ class _ProductCardState extends State<ProductCard> {
                     child: Stack(
                       children: [
                         Center(
-                          child: Image.network(
-                            widget.product.image,
+                          child: CachedNetworkImage(
+                            imageUrl: widget.product.image,
                             width: 95.r,
                             height: 95.r,
                             fit: BoxFit.contain,
+                            placeholder: (context, url) =>
+                                const Center(child: AppLoader()),
+                            errorWidget: (context, url, error) =>
+                                const Center(child: Icon(Icons.error)),
                           ),
                         ),
 
