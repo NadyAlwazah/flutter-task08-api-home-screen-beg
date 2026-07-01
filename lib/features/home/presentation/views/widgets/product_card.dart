@@ -81,7 +81,7 @@ class _ProductCardState extends State<ProductCard> {
                   /// BEST SELLER
                   Text(
                     'BEST SELLER',
-                    style: Styles.textStyle12W500.copyWith(
+                    style: Styles.textStyle12W500Poppins.copyWith(
                       color: const Color(0xFF34C759),
                     ),
                   ),

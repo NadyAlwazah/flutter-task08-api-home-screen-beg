@@ -29,14 +29,14 @@ class PopularTShirtSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // العنوان + زر See all
+        // See all العنوان + زر
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Popular T-shirt', style: Styles.textStyle16W500),
             GestureDetector(
               onTap: () {},
-              child: Text('See all', style: Styles.textStyle12W500),
+              child: Text('See all', style: Styles.textStyle12W500Poppins),
             ),
           ],
         ),
