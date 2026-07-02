@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_task08_api_home_screen_beg/core/utils/app_colors.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/utils/styles.dart';
 
 class CategoriesListView extends StatelessWidget {
@@ -21,7 +22,10 @@ class CategoriesListView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Select Category', style: Styles.textStyle16W600),
+        Text(
+          'Select Category',
+          style: Styles.textStyle16W600.copyWith(color: AppColors.textPrimary),
+        ),
         SizedBox(height: 12.h),
 
         SizedBox(

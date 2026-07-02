@@ -44,7 +44,7 @@ class _ProductCardState extends State<ProductCard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  /// الصورة + المفضلة
+                  // الصورة + المفضلة
                   Expanded(
                     child: Stack(
                       children: [
@@ -74,8 +74,8 @@ class _ProductCardState extends State<ProductCard> {
                               isFavorite
                                   ? AssetsData.iconFavoriteRedSvg
                                   : AssetsData.iconFavoriteSvg,
-                              width: 12.w,
-                              height: 12.w,
+                              width: 14.r,
+                              height: 14.r,
                             ),
                           ),
                         ),
@@ -101,7 +101,7 @@ class _ProductCardState extends State<ProductCard> {
                     // maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: Styles.textStyle14W600.copyWith(
-                      color: const Color(0xFF6A6A6A),
+                      color: AppColors.textSecondary,
                     ),
                   ),
 
@@ -113,7 +113,7 @@ class _ProductCardState extends State<ProductCard> {
                     child: Text(
                       '\$${widget.product.price.toStringAsFixed(2)}',
                       style: Styles.textStyle14W500.copyWith(
-                        color: const Color(0xFF2B2B2B),
+                        color: AppColors.textPrimary,
                       ),
                     ),
                   ),

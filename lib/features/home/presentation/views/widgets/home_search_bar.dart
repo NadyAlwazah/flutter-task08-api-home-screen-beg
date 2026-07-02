@@ -51,7 +51,7 @@ class HomeSearchBar extends StatelessWidget {
                     width: 24.r,
                     height: 24.r,
                     colorFilter: const ColorFilter.mode(
-                      Color(0xFF6A6A6A),
+                      AppColors.textSecondary,
                       BlendMode.srcIn,
                     ),
                   ),

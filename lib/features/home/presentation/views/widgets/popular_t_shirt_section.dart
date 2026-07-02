@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_task08_api_home_screen_beg/core/utils/app_colors.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/utils/styles.dart';
 import 'package:flutter_task08_api_home_screen_beg/core/widgets/app_loader.dart';
 import 'package:flutter_task08_api_home_screen_beg/features/home/data/manager/product_cubit/product_cubit.dart';
@@ -18,7 +19,12 @@ class PopularTShirtSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Popular T-shirt', style: Styles.textStyle16W500),
+            Text(
+              'Popular T-shirt',
+              style: Styles.textStyle16W500.copyWith(
+                color: AppColors.textPrimary,
+              ),
+            ),
             GestureDetector(
               onTap: () {},
               child: Text('See all', style: Styles.textStyle12W500Poppins),
@@ -44,7 +50,9 @@ class PopularTShirtSection extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final product = state.products[index];
                     return Padding(
-                      padding: EdgeInsets.only(right: 16.w),
+                      padding: EdgeInsets.only(
+                        right: index == state.products.length - 1 ? 0 : 20.w,
+                      ),
                       child: ProductCard(product: product),
                     );
                   },

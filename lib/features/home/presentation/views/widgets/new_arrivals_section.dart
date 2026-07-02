@@ -17,7 +17,12 @@ class NewArrivalsSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("New Arrivals", style: Styles.textStyle16W600),
+            Text(
+              "New Arrivals",
+              style: Styles.textStyle16W600.copyWith(
+                color: AppColors.textPrimary,
+              ),
+            ),
             GestureDetector(
               onTap: () {},
               child: Text("See all", style: Styles.textStyle12W500Poppins),
@@ -55,19 +60,18 @@ class NewArrivalsSection extends StatelessWidget {
                     Text(
                       "Summer Sale",
                       style: Styles.textStyle12W500Raleway.copyWith(
-                        color: const Color(0xFF3B3B3B),
+                        color: AppColors.textPrimary,
                       ),
                     ),
-
                     const SizedBox(height: 4),
-
                     Text(
                       '15% OFF',
                       style: TextStyle(
+                        height: 1.02,
                         fontFamily: 'FuturaPTCond',
                         fontWeight: FontWeight.w900,
                         color: const Color(0xFF674DC5),
-                        fontSize: 36.sp,
+                        fontSize: 40.sp,
                       ),
                     ),
                   ],

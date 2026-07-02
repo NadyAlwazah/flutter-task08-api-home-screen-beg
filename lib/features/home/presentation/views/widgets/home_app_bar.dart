@@ -25,7 +25,12 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Stack(
         clipBehavior: Clip.none,
         children: [
-          Text("Explore", style: Styles.textStyle32Bold),
+          Text(
+            "Explore",
+            style: Styles.textStyle32Bold.copyWith(
+              color: AppColors.appBarTitleColor,
+            ),
+          ),
           Positioned(
             left: -17.w,
             top: -6.h,
